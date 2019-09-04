@@ -1,5 +1,14 @@
-# Docker Introduction
+# Table of content:
+- [Docker Introduction](#-Docker-Introduction)
+- [Manipulating Containers with the Docker Client](#-Manipulating-Containers-with-the-Docker-Client)
+- [Building Custom Images Through Docker Server](#-Building-Custom-Images-Through-Docker-Server)
 
+# Docker Introduction
+- [run Docker image](#1--run-Docker-image:)
+- [run command from container](#2--to-run-command-from-container:)
+- [list all running containers](#3--list-all-running-containers-on-machine:)
+- [list all containers ever created on machine](#4--list-all-containers-ever-created-on-machine:)
+___
 ### 1- run Docker image:
     docker run <image-name>
 - that will check image build cache if image is not there "Docker-server" will get that image from "Docker-HUB" then run the container
@@ -11,12 +20,22 @@ ___
 ### 3- list all running containers on machine:
     docker ps  
 ___
-### 4- list all containers ever created on machine
+### 4- list all containers ever created on machine:
     docker ps --all
 ___
 
 # Manipulating Containers with the Docker Client
 
+- [Create Docker container](#1--Create-Docker-container:)
+- [Start Docker container](#2--Start-Docker-container:)
+- [Remove All Stopped containers](#3--Remove-All-Stopped-containers:)
+- [Get Docker container log](#4--Get-Docker-container-log:)
+- [Stop Docker container](#5--Stop-Docker-container:)
+- [Kill Docker container](#6--Kill-Docker-container:)
+- [Run Command inside Docker container](#7--Run-Command-inside-Docker-container:)
+- [Run Terminal inside Docker container](#8--Run-Terminal-inside-Docker-container:)
+- [Start Docker container with Terminal](#9--Start-Docker-container-with-Terminal:)
+___
 ### 1- Create Docker container:
     docker create <image-name>
 - that will check image build cache if image is not there "Docker-server" will get that image from "Docker-HUB" then will load file system snap shot to isolated container
