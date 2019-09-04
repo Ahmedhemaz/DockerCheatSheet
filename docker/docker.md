@@ -1,7 +1,7 @@
 # Table of content:
-- [Docker Introduction](#-Docker-Introduction)
-- [Manipulating Containers with the Docker Client](#-Manipulating-Containers-with-the-Docker-Client)
-- [Building Custom Images Through Docker Server](#-Building-Custom-Images-Through-Docker-Server)
+- [Docker Introduction](#Docker-Introduction)
+- [Manipulating Containers with the Docker Client](#Manipulating-Containers-with-the-Docker-Client)
+- [Building Custom Images Through Docker Server](#Building-Custom-Images-Through-Docker-Server)
 
 # Docker Introduction
 - [run Docker image](#1--run-Docker-image:)
