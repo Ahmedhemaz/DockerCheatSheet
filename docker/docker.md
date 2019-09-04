@@ -56,8 +56,40 @@ ___
     docker exec -it <Container-id> <Command>
 - -it  :  "can be written as -i -t"
 - -i: to connect terminal with container STDIN
-- -t: nice format o/p
+- -t: nice format of output
 ___
 ### 8- Run Terminal inside Docker container:
     docker exec -it <Container-id> sh
+- to exit container Terminal:
+            
+      press "command+d"
+      OR:-
+      exit
+___
+### 9- Start Docker container with Terminal:
+    docker run -it <image-name> sh
+___
+
+# Building Custom Images Through Docker Server
+
+### 1- Create Custom Docker image:
+
+1. Specify base image
+2. Run some commands to install additional programs
+3. Specify a command to run on container startup
+    
+        touch Dockerfile 
+
+- follow custom-docker-image example 
+- after creating the Dockerfile run 
+    
+      docker build .
+- make sure that you are in the same Dockerfile directory 
+- then take the container id and start it with
+
+      docker run <image-id>
+
+##### *Note that when building docker image after each Dockerfile command will create intermediate container with the created image file system snapshot till reach the last command and generate the last docker image
+
+##### *Note that when building docker image again will use cached images unless you added some new commands will fetch images from docker hub starting from that line downwords
 ___
