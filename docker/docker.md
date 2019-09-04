@@ -91,6 +91,9 @@ ___
 
 # Building Custom Images Through Docker Server
 
+- [Create Custom Docker image](#1--Create-Custom-Docker-image:)
+- [Tagging a Custom Image](#2--Tagging-a-Custom-Image:)
+___
 ### 1- Create Custom Docker image:
 
 1. Specify base image
@@ -99,7 +102,7 @@ ___
     
         touch Dockerfile 
 
-- follow custom-docker-image example 
+- follow  [example](custom-docker-image/Dockerfile) 
 - after creating the Dockerfile run 
     
       docker build .
@@ -111,4 +114,7 @@ ___
 ##### *Note that when building docker image after each Dockerfile command will create intermediate container with the created image file system snapshot till reach the last command and generate the last docker image
 
 ##### *Note that when building docker image again will use cached images unless you added some new commands will fetch images from docker hub starting from that line downwords
+___
+### 2- Tagging a Custom Image:
+    docker build -t yourDockerUserName/ProjectName:latest .
 ___
