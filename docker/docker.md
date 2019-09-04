@@ -35,6 +35,7 @@ ___
 - [Run Command inside Docker container](#7--Run-Command-inside-Docker-container)
 - [Run Terminal inside Docker container](#8--Run-Terminal-inside-Docker-container)
 - [Start Docker container with Terminal](#9--Start-Docker-container-with-Terminal)
+- [Start Docker container with Port Mapping](#10--Start-Docker-container-with-Port-Mapping)
 ___
 ### 1- Create Docker container:
     docker create <image-name>
@@ -87,6 +88,9 @@ ___
 ___
 ### 9- Start Docker container with Terminal:
     docker run -it <image-name> sh
+___
+### 10- Start Docker container with Port Mapping:
+    docker run -p <incoming/Port> : <Port/inside> <image-id>
 ___
 
 # Building Custom Images Through Docker Server
