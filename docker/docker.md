@@ -4,10 +4,10 @@
 - [Building Custom Images Through Docker Server](#Building-Custom-Images-Through-Docker-Server)
 
 # Docker Introduction
-- [run Docker image](#1--run-Docker-image:)
-- [run command from container](#2--to-run-command-from-container:)
-- [list all running containers](#3--list-all-running-containers-on-machine:)
-- [list all containers ever created on machine](#4--list-all-containers-ever-created-on-machine:)
+- [run Docker image](#1--run-docker-image)
+- [run command from container](#2--to-run-command-from-container)
+- [list all running containers](#3--list-all-running-containers-on-machine)
+- [list all containers ever created on machine](#4--list-all-containers-ever-created-on-machine)
 ___
 ### 1- run Docker image:
     docker run <image-name>
@@ -26,15 +26,15 @@ ___
 
 # Manipulating Containers with the Docker Client
 
-- [Create Docker container](#1--Create-Docker-container:)
-- [Start Docker container](#2--Start-Docker-container:)
-- [Remove All Stopped containers](#3--Remove-All-Stopped-containers:)
-- [Get Docker container log](#4--Get-Docker-container-log:)
-- [Stop Docker container](#5--Stop-Docker-container:)
-- [Kill Docker container](#6--Kill-Docker-container:)
-- [Run Command inside Docker container](#7--Run-Command-inside-Docker-container:)
-- [Run Terminal inside Docker container](#8--Run-Terminal-inside-Docker-container:)
-- [Start Docker container with Terminal](#9--Start-Docker-container-with-Terminal:)
+- [Create Docker container](#1--Create-Docker-container)
+- [Start Docker container](#2--Start-Docker-container)
+- [Remove All Stopped containers](#3--Remove-All-Stopped-containers)
+- [Get Docker container log](#4--Get-Docker-container-log)
+- [Stop Docker container](#5--Stop-Docker-container)
+- [Kill Docker container](#6--Kill-Docker-container)
+- [Run Command inside Docker container](#7--Run-Command-inside-Docker-container)
+- [Run Terminal inside Docker container](#8--Run-Terminal-inside-Docker-container)
+- [Start Docker container with Terminal](#9--Start-Docker-container-with-Terminal)
 ___
 ### 1- Create Docker container:
     docker create <image-name>
@@ -91,8 +91,8 @@ ___
 
 # Building Custom Images Through Docker Server
 
-- [Create Custom Docker image](#1--Create-Custom-Docker-image:)
-- [Tagging a Custom Image](#2--Tagging-a-Custom-Image:)
+- [Create Custom Docker image](#1--Create-Custom-Docker-image)
+- [Tagging a Custom Image](#2--Tagging-a-Custom-Image)
 ___
 ### 1- Create Custom Docker image:
 
