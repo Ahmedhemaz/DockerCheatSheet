@@ -102,7 +102,7 @@ ___
     
         touch Dockerfile 
 
-- follow  [example](custom-docker-image/Dockerfile) 
+- follow  [example](/DockerCheatSheet/blob/master/docker/custom-docker-image-ex/Dockerfile) 
 - after creating the Dockerfile run 
     
       docker build .
