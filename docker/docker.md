@@ -2,16 +2,21 @@
 - [Docker Introduction](#Docker-Introduction)
 - [Manipulating Containers with the Docker Client](#Manipulating-Containers-with-the-Docker-Client)
 - [Building Custom Images Through Docker Server](#Building-Custom-Images-Through-Docker-Server)
-
+- [Building multiple containers with "Docker-compose"](#Building-multiple-containers-with-"Docker-compose")
+___
 # Docker Introduction
 - [run Docker image](#1--run-docker-image)
 - [run command from container](#2--to-run-command-from-container)
 - [list all running containers](#3--list-all-running-containers-on-machine)
 - [list all containers ever created on machine](#4--list-all-containers-ever-created-on-machine)
+- [stop running container](#5--stop-running-container)
 ___
 ### 1- run Docker image:
     docker run <image-name>
 - that will check image build cache if image is not there "Docker-server" will get that image from "Docker-HUB" then run the container
+- you can run container in back ground using:
+      
+      docker run -d <image-name>
 ___
 ### 2- to run command from container:
     docker run <image-name> <command-wanna-to-excute>
@@ -22,6 +27,9 @@ ___
 ___
 ### 4- list all containers ever created on machine:
     docker ps --all
+___
+### 5- stop running container:
+      docker stop <container-id>
 ___
 
 # Manipulating Containers with the Docker Client
@@ -121,4 +129,46 @@ ___
 ___
 ### 2- Tagging a Custom Image:
     docker build -t yourDockerUserName/ProjectName:latest .
+___
+# Building  multiple containers with "Docker-compose":
+- [Usage](#1--Usage)
+- [docker-compose file structure](#2--docker-compose-file-structure)
+- [docker-compose commands](#3--docker-compose-commands)
+
+
+### 1- Usage:
+- to use multiple containers and set a network infrastructure between contaiers 
+___
+### 2- docker-compose file structure:
+- follow [example](https://github.com/Ahmedhemaz/DockerCheatSheet/blob/master/docker/docker-compose-example/docker-compose.yml) 
+___
+#### 2-1 restart policies:
+- "no" : Never attempt to restart this container if it stops or crashes
+- always : If this container stops for any reason always attempt to restart
+- on-failure : Only restart this container with an error code
+- unless-stopped : Always restart unless (Developer) forcibly stop it 
+___
+## 3- docker-compose commands:
+- [run containers in docker-compose file](#3-1-run-containers-in-docker-compose-file)
+- [run containers in background](#3-2-run-containers-in-background)
+- [stop all running containers](#3-3-stop-all-running-containers)
+- [list all running containers](#3-4-list-all-running-containers)
+___
+### 3-1 run containers in docker-compose file:
+      docker-compose up
+- docker compose will make default network between containers 
+- if you are using database or some service you can connect with them by providing the name of service in the host part of your application and docker compose will connect them 
+
+#### *Note: if you wanna rebuild an image you can use 
+      docker-compose up --build
+___
+### 3-2 run containers in background:
+      docker-compose up -d
+___
+### 3-3 stop all running containers:
+      docker-compose down
+___
+### 3-4 list all running containers:
+      docker-compose ps
+- should run it from docker-compose file location
 ___
