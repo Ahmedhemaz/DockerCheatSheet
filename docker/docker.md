@@ -2,7 +2,7 @@
 - [Docker Introduction](#Docker-Introduction)
 - [Manipulating Containers with the Docker Client](#Manipulating-Containers-with-the-Docker-Client)
 - [Building Custom Images Through Docker Server](#Building-Custom-Images-Through-Docker-Server)
-- [Building multiple containers with "Docker-compose"](#Building-multiple-containers-with-"Docker-compose")
+- [Building multiple containers with "Docker-compose"](#building--multiple-containers-with-docker-compose)
 ___
 # Docker Introduction
 - [run Docker image](#1--run-docker-image)
@@ -140,7 +140,7 @@ ___
 - to use multiple containers and set a network infrastructure between contaiers 
 ___
 ### 2- docker-compose file structure:
-- follow [example](https://github.com/Ahmedhemaz/DockerCheatSheet/blob/master/docker/docker-compose-example/docker-compose.yml) 
+- follow [example](https://github.com/Ahmedhemaz/DockerCheatSheet/blob/master/docker/docker-compose-example) 
 ___
 #### 2-1 restart policies:
 - "no" : Never attempt to restart this container if it stops or crashes
