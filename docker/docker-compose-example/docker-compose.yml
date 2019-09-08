@@ -3,8 +3,34 @@ services:
   redis-server:
     restart: always
     image: 'redis'
+  db:
+    image: mysql:5.7.26
+    restart: always
+    expose: 
+      - "3306"
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Password
+      MYSQL_DATABASE: name
+      MYSQL_PASSWORD: Password
   node-app: 
     restart: always
-    build: .
-    ports: 
-      - "8080:8080"
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+     - /usr/app/node_modules
+     - ./node-app:/user/app
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_USER=username
+      - DATABASE_PASSWORD=password
+      - DATABASE_NAME=name
+      - DATABASE_PORT=3306
+    depends_on:
+      - db
+    links: 
+      - db
+    ports:
+      - "3000:3000"
