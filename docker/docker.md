@@ -17,6 +17,15 @@ ___
 - you can run container in back ground using:
       
       docker run -d <image-name>
+
+- If you want to remove the container right after it stops, use:
+
+      docker run --rm
+
+- You can also specify the name of the container by using the option `--name`, which then allows you to start and stop the container by calling it with the name you specified when you created it.
+
+      docker run --name
+
 ___
 ### 2- to run command from container:
     docker run <image-name> <command-wanna-to-excute>
